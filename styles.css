@@ -32,7 +32,7 @@ a {
 .border-box {
     margin: 10px auto;
     width: 960px;
-    max-width: 960px;
+    max-width: 1200px;
     border-width: 3px;
     border-style: solid;
     border-image: linear-gradient(
@@ -242,136 +242,46 @@ p:not(:first-of-type, :nth-child(2))::first-letter {
     grid-column: 1 / -1;
 }
 
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 768px) {
     .hero-title {
-        font-size: 6vw;
-        line-height: 6vw;
-        margin-top: 1vw;
-        margin-bottom: 2vw;
+        font-size: min(6vw, 100px);
+        line-height: min(6vw,100px);
+        margin-top: min(1vw, 30px);
+        margin-bottom: min(2vw,30px);
     }
     .hero-subtitle {
         margin-bottom: 2rem;
     }
     .border-box {
         width: 80%;
-        padding: 0;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 767px) {
     .image-wrapper {
         grid-template-columns: 1fr;
     }
     .hero-title {
-        font-size: 6rem;
-        line-height: 6rem;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
+        font-size: 15vw;
+        line-height: 15vw;
+        margin-top: 5vw;
+        margin-bottom: 10vw;
     }
     .hero-subtitle {
-        margin-bottom: 2rem;
+        margin-bottom: 6vw;
+        font-size: 6vw;
     }
     .border-box {
-        width: 600px;
+        width: 90vw;
         padding: 0;
     }
-}
 
-@media only screen and (max-width: 600px) {
-    .hero-title {
-        font-size: 5.2rem;
-        line-height: 6rem;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
+    .author, .text {
+        font-size: 5vw;
     }
-    .hero-subtitle {
-        margin-bottom: 1rem;
-    }
-    .border-box {
-        width: 500px;
-        padding: 0;
-    }
-    
-    .hero-subtitle,
-    .author,
-    .quote,
-    .list-title {
-        font-size: 1.8rem;
-        margin-top: 1rem;
-    }
-    .text {
-        font-size: 1.6rem;
-    } 
-}
-
-@media only screen and (max-width: 550px) {
-    .hero-title {
-        font-size: 5.2rem;
-        line-height: 6rem;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-    }
-    .hero-subtitle {
-        margin-bottom: 1rem;
-    }
-    .border-box {
-        width: 400px;
-        padding: 0;
-    }
-    
-    .hero-subtitle,
-    .author,
-    .quote,
-    .list-title {
-        font-size: 1.8rem;
-        margin-top: 1rem;
-    }
-    .text {
-        font-size: 1.6rem;
-    } 
-}
-
-@media only screen and (max-width: 420px) {
-    .hero-title {
-        font-size: 4.5rem;
-        line-height: 5rem;
-    }
-    .border-box {
-        width: 360px;
-        padding: 0;
-    }
-    .main {
-        padding-top: 0px;
-    }
-    .hero-title{
-        margin: 1rem auto 2rem auto;
-    }
-    .hero-subtitle {
-        margin-bottom: 1rem;
-    }
-    .text {
-       top: -50px; 
-    }
-}
-
-@media only screen and (max-width: 320px) {
-    .hero-title {
-        font-size: 4rem;
-    }
-    .border-box {
-        width: 300px;
-        padding: 0;
-    }
-    .main {
-        padding-top: 0px;
-    }
-    .hero-title{
-        margin: 1rem auto 2rem auto;
-    }
-    .hero-subtitle {
-        margin-bottom: 1rem;
-    }
-    .text {
-       top: -50px; 
+    .quote {
+        font-size: 6vw;
     }
 }
