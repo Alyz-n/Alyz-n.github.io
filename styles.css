@@ -35,6 +35,26 @@ a {
     max-width: 1200px;
     border-width: 3px;
     border-style: solid;
+    border-image: -webkit-linear-gradient(
+        135deg,
+        rgba(0, 0, 128, 100%) 50%,
+        rgba(255, 0, 0, 70%)
+    ) 1;
+    border-image: -moz-linear-gradient(
+        135deg,
+        rgba(0, 0, 128, 100%) 50%,
+        rgba(255, 0, 0, 70%)
+    ) 1;
+    border-image: -o-linear-gradient(
+        135deg,
+        rgba(0, 0, 128, 100%) 50%,
+        rgba(255, 0, 0, 70%)
+    ) 1;
+    border-image: -ms-linear-gradient(
+        135deg,
+        rgba(0, 0, 128, 100%) 50%,
+        rgba(255, 0, 0, 70%)
+    ) 1;
     border-image: linear-gradient(
         135deg,
         rgba(0, 0, 128, 100%) 50%,
