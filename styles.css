@@ -275,12 +275,13 @@ input[id^="a"]:not(:checked) + label {
         top: -35px;
     }
     .hero-description {
+        position: relative;
         font-size: .8em;
         white-space: pre-line;
         text-align: justify;
-        top: 6.8em;
+        top: -77px;
         padding-left: 5.5em;
-        padding-right: 4em;
+        padding-right: 2em;
     }
     .article-grid {
         margin: 15px auto;
