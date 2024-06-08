@@ -7,6 +7,10 @@
 * {
     box-sizing: border-box;
 }
+html, body {
+    overflow-x:hidden;
+}
+
 body.preload *{
     -webkit-animation-duration: 0s !important;
     animation-duration: 0s !important;
@@ -31,7 +35,6 @@ hr:first-of-type{
 
 /* =========================================|**|==============> HERO-MAIN */
 .hero {                 
-    display:block;                    
     font-family: "Montserrat", sans-serif;  
     color: var(--gold);
     height: 10em;
@@ -88,7 +91,7 @@ hr:first-of-type{
     position: absolute;
     display: block;
     font-size: 1.5em;
-    top: 4.2em;
+    top: 4.6em;
     padding-left: 4.5em;
     color: navy;
 }
@@ -187,10 +190,7 @@ input[id^="a"]:not(:checked) + label {
 }
 
 .vertrect-article {grid-row: span 2;}
-.horirect-article {
-    grid-column: span 2;
-    max-width: 746px;
-}
+.horirect-article {grid-column: span 2;}
 
 @keyframes square_article_info {
     0%{
@@ -235,4 +235,286 @@ input[id^="a"]:not(:checked) + label {
     100% {
         filter: blur(1px);
     }
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 599px) {
+    .main {
+        margin: 0 auto;
+        width: 87.5%;
+    }
+    hr:first-of-type {
+        width: 100%;
+    }
+    .school {
+        top:-5px;
+        padding-left: 0;
+        font-size: .7em;
+    }
+    .hero {
+        padding: 0;
+        margin-bottom: -55px;
+        margin-top: -20px;
+        text-shadow: 0 2.5px var(--shadow),.5px 0 var(--shadow),-.5px 0 var(--shadow);
+    }
+    .hero-title{
+        font-size: 2.7em;                         
+        margin-top: 20px;
+        
+        position: relative;
+        left: -3px;
+        top: -20px;
+    }
+    .hero-title::first-letter{                  
+        font-weight: 200;                       
+        font-size: 2.5em;
+    }    
+    .hero-title span {
+        position: relative;
+        top: -35px;
+    }
+    .hero-description {
+        font-size: .8em;
+        white-space: pre-line;
+        text-align: justify;
+        top: 6.8em;
+        padding-left: 5.5em;
+        padding-right: 4em;
+    }
+    .article-grid {
+        margin: 15px auto;
+        width: 90%;
+        height: 100vh;
+    
+        grid-template-columns: 75vw;
+        grid-template-rows: repeat(6, 75vw);
+        grid-gap: 6px;
+    }.horirect-article, .vertrect-article {grid-row: span 1; grid-column: span 1;}
+    .navbar {
+        width: 100%;
+        height: 15vw;
+        max-height: 50px;
+
+        margin: 0 auto;
+        gap: 5%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 0 10px;
+    }.navbar a {
+        font-size: 80%;    
+        text-shadow: 3px 4px 5px rgba(255,255,255, 50%), /* bottom-right */
+        3px -4px 5px rgba(255,255,255, 50%), /* top-right */
+        -3px 4px 5px rgba(255,255,255, 50%), /* bottom-right */
+        -3px -4px 5px rgba(255,255,255, 50%);
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .main {
+        margin: 0 auto;
+        width: 550px;
+    }
+    hr:first-of-type {
+        width: 550px;
+    }
+    .school {
+        top:-5px;
+        padding-left: 0;
+        font-size: .8em;
+    }
+    .hero {
+        padding: 0 3.9%;
+        margin-bottom: -70px;
+        text-shadow: 0 2.5px var(--shadow),.5px 0 var(--shadow),-.5px 0 var(--shadow);
+    }
+    .hero-title{
+        font-size: 2.5em;                         
+        margin-top: 25px;
+    }
+    .hero-title::first-letter{                  
+        font-weight: 200;                       
+        font-size: 2.5em;
+    }    
+    .hero-title span {
+        position: relative;
+        top: -35px;
+    }
+    .hero-description {
+        font-size: .85em;
+        top: 6.3em;
+        padding-left: 5.04em;
+    }
+    .article-grid {
+        margin: 15px auto;
+        width: 90vw;
+        height: 100vh;
+    
+        grid-template-columns: repeat(3, 176px);
+        grid-template-rows: repeat(5, 176px);
+        grid-gap: 6px;
+    }
+    .navbar {
+        width: 550px;
+        height: 23px;
+
+        margin: 0 auto;
+        gap: 8%;
+    }.navbar a {
+        font-size: .7em;
+        text-shadow: 2px 3px 4px rgba(255,255,255, 50%), /* bottom-right */
+        2px -3px 4px rgba(255,255,255, 50%), /* top-right */
+        -2px 3px 4px rgba(255,255,255, 50%), /* bottom-right */
+        -2px -3px 4px rgba(255,255,255, 50%);
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .main {
+        margin: 0 auto;
+        width: 650px;
+    }
+    hr:first-of-type {
+        width: 650px;
+    }
+    .school {
+        top:-5px;
+        padding-left: 0;
+        font-size: .8em;
+    }
+    .hero {
+        padding: 0 4.2%;
+        margin-bottom: -70px;
+        text-shadow: 0 3px var(--shadow),1px 0 var(--shadow),-1px 0 var(--shadow);
+    }
+    .hero-title{
+        font-size: 3em;                         
+        margin-top: 10px;
+    }
+    .hero-title::first-letter{                  
+        font-weight: 200;                       
+        font-size: 2.5em;
+    }    
+    .hero-title span {
+        position: relative;
+        top: -35px;
+    }
+    .hero-description {
+        font-size: 1em;
+        top: 5.6em;
+        padding-left: 5.02em;
+    }
+    .article-grid {
+        margin: 15px auto;
+        width: 568px;
+        height: 568px;
+    
+        grid-template-columns: repeat(3, 184px);
+        grid-template-rows: repeat(3, 184px);
+        grid-gap: 8px;
+    }
+    .navbar {
+        width: 650px;
+        height: 25px;
+
+        margin: 0 auto;
+        gap: 8%;
+    }.navbar a {font-size: .8em;}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .main {
+        margin: 0 auto;
+        width: 900px;
+    }
+    hr:first-of-type {
+        width: 900px;
+    }
+    .school {
+        top:-5px;
+        padding-left: 0;
+        font-size: 1rem;
+    }
+    .hero {
+        padding: 0 4.2%;
+        margin-bottom: -30px;
+    }
+    .hero-title{
+        font-size: 4em;                         
+        margin-top: 10px;
+    }
+    .hero-title::first-letter{                  
+        font-weight: 200;                       
+        font-size: 2.5em;
+    }    
+    .hero-title span {
+        position: relative;
+        top: -50px;
+    }
+    .hero-description {
+        font-size: 1.4em;
+        top: 5em;
+        padding-left: 4.8em;
+    }
+    .article-grid {
+        margin: 15px auto;
+        width: 868px;
+        height: 868px;
+    
+        grid-template-columns: repeat(3, 282px);
+        grid-template-rows: repeat(3, 282px);
+        grid-gap: 11px;
+    }
+    .navbar {
+        width: 900px;
+        height: 30px;
+
+        margin: 0 auto;
+        gap: 9%;
+    }.navbar a {font-size: .97em;}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .main {
+        margin: 0 auto;
+        width: 1200px;
+    }    
+    hr:first-of-type {
+        width: 1200px;
+    }    
+    .school {
+        padding-left: 100px;
+    }
+    .hero {
+        padding: 0 13.5%;
+        margin-bottom: -25px;
+    }
+    .hero-title{
+        margin-top: 10px;
+    }
+    .hero-description {
+        font-size: 1.5em;
+        top: 4.6em;
+        padding-left: 4.5em;
+    }
+    .article-grid {
+        margin: 20px auto;
+        width: 1050px;
+        height: 1050px;
+
+        grid-template-columns: repeat(3, 340px);
+        grid-template-rows: repeat(3, 340px);
+        grid-gap: 15px;
+    }
+    .navbar {
+        width: 1200px;
+        height: 30px;
+
+        margin: 0 auto;
+        gap: 10%;
+    }.navbar a {font-size: 1em;}
 }
